@@ -11,7 +11,6 @@
 * 支持统一Header
 
 ## 使用
----
 	final SpiderMan spiderMan = new SpiderMan.Builder(this)
                 .baseUrl("http://172.18.8.75:5000/")
                 .openLog()  //打开网络日志
@@ -19,18 +18,19 @@
                 .addDefaultCallbackExecutor()  //添加回调在非UI线程执行,主要用于下载
                 .build();
                 
+  
 ### 同步Get
 	Map<String, String> parameters = new HashMap<>();
                 parameters.put("start", "0");
                 parameters.put("count", "1");
                 Music result = spiderMan.get("music/250", parameters, Music.class);
-
+  
 ### 同步Post
 	Map<String, String> parameters = new HashMap<>();
                 parameters.put("username", "zx");
                 parameters.put("password", "1234");
                 User result = spiderMan.post("user/create", parameters, User.class);
-                
+                  
 ### 异步Get
 	Map<String, String> parameters = new HashMap<>();
                 parameters.put("start", "0");
@@ -48,6 +48,7 @@
                         System.out.println(response);
                     }
                 });
+  
 ### 异步POST
 	Map<String, String> parameters = new HashMap<>();
                 parameters.put("username", "zx");
@@ -67,6 +68,7 @@
                     }
                 });
                 
+  
 ### 下载
 	String downUrl = "http://www.dopost.com/game/cloud/aaa.apk";
 	spiderMan.download(downUrl, new SpiderMan.DownloadCallBack() {
@@ -88,7 +90,7 @@
                 System.out.println(fileSize);
             }
         });
-        
+          
 ### 上传
 	String uploadUrl = "api/upload";
 	spiderMan.upload(uploadUrl, "myfile", new File(Environment.getExternalStorageDirectory()+File.separator+"tmp.apk"),
@@ -113,6 +115,6 @@
                 }
             }
         });
-        
+          
 ### 自定义API Service
 	UserApiService userApiService = spiderMan.create(UserApiService.class);
