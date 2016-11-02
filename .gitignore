@@ -19,3 +19,8 @@ gen/
 # Gradle files
 .gradle/
 build/
+
+
+# bintrty upload
+bintrayUpload.gradle
+project.properties
