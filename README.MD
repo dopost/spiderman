@@ -11,6 +11,17 @@
 * 支持统一Header
 
 ## 使用
+	allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}
+	dependencies {
+	        compile 'com.github.dopost:spiderman:v2.0'
+	}
+<br/>
+
 	final SpiderMan spiderMan = new SpiderMan.Builder(this)
                 .baseUrl("http://172.18.8.75:5000/")
                 .openLog()  //打开网络日志
