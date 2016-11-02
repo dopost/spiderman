@@ -1,0 +1,23 @@
+####################
+# MAC OS X
+####################
+.DS_Store
+.AppleDouble
+.LSOverride
+
+local.properties
+*.iml
+.idea
+.gradle/
+.Trashes
+
+
+# Generated files
+bin/
+gen/
+
+# Gradle files
+.gradle/
+build/
+
+bintrayUpload.gradle
